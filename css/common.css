@@ -3,6 +3,7 @@
 @import url(./core.css); 
 @import url(./reset.css);
 
+
 /* 페이지 속박스 */
 .page .inbox {
   position: relative;
