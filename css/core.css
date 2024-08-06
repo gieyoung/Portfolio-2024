@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+
+/********************************* 웹폰트*********************************/
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+/* 전체 감싼 박스 */
+#wrap {
+  position: relative;
+ 
+}
+
+.inbox {
+  max-width: 1400px;
+  height: 100%;
+  outline: 1px solid red;
+  margin: 0 auto;
+ 
+}
+
+/* 글자날리기 */
+.ir {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 임시타이틀 */
+.temp-tit {
+  position: absolute;
+  font-size: 2vw;
+  color: #888;
+  z-index: 999;
+}
+
+/* 공통클래스: 클리어 설정 */
+.clb::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+html {
+  /* rem 계산 편하게 하기 위해 */
+  font-size: 10px;
+  /* 부드러운 스크롤 */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* 폰트 */
+  font-family: 'Pretendard-Regular';
+}
+
+

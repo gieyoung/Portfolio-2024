@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* 공유기능 요소 셋팅 */
+@import url(./core.css); 
+@import url(./reset.css);
+
+/* 페이지 속박스 */
+.page .inbox {
+  position: relative;
+  height: 100vh;
+}
+
+/* 1. 상단영역 */
+#header {
+  position: fixed;
+  /* 상단고정-보이는화면기준 */
+  width: 100%;
+  z-index: 9999; /* 맨위! */
+  background: #c8c8c8;
+  border-bottom: 1px solid #E8E8E8;
+}
+/* 상단영역 속박스 */
+.header {
+  position: relative;
+  /* 부모자격 */
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 1-1.로고 */
+#logo {
+  width: 10%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+#logo img {
+  width: 100%;
+  margin-top: -24px;
+}
+
+/* 1-2. GNB 메뉴 */
+.gnb {
+  width:80%;
+}
+/* 메뉴 플렉스박스 */
+.gnb ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.gnb li {
+  margin: 0 20px;
+}
+
+.gnb li a{
+  font-size:2.0rem;
+  font-weight: bold;
+}
+/* 메뉴에 마우스 오버시 + li.on 인경우 */
+.gnb a:hover,
+.gnb li.on a {
+  display: inline-block; /* 트랜스폼적용위해 */
+  color: lime;
+  text-decoration: overline; /* 윗줄 */
+  transform: scale(1.1);
+}
+
+/* 각 페이지 클래스 */
+#pg1 {
+  background-color: #fff;
+}
+
+
+/* 인디케이터 */
+.indic {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 세로중앙이동 */
+  left: 10px;
+  width: 20px;
+  /* outline: 3px dotted blue; */
+}
+
+.indic li {
+  width: 100%;
+  height: 10px;
+  margin: 3px 0;
+  cursor: pointer; /* 손가락모양 */
+}
+
+/* a요소 */
+.indic a {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 4px;
+  background-color: #ccc;
+  box-shadow: 1px 1px 1px #777;
+  transition: width 0.4s;
+}
+
+/* 마우스 오버시 + 클래스 "on" */
+.indic li:hover a,
+.indic li.on a {
+  width: 150%;
+  background-color: #fff;
+}
+
+/* 설명글자숨기기 */
+.indic span {
+  display: none;
+}
