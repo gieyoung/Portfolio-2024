@@ -10,6 +10,7 @@
   height: 100vh;
 }
 
+
 /* 1. 상단영역 */
 #header {
   position: fixed;
@@ -30,11 +31,14 @@
 }
 
 /* 1-1.로고 */
-#logo {
-  width: 10%;
-  height: 100%;
-  text-align: center;
-  overflow: hidden;
+#logo{
+  width: 20%;
+  line-height: 100px;
+   
+}
+
+#logo a{
+  font-weight: bold;
 }
 #logo img {
   width: 100%;
