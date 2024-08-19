@@ -1,22 +1,21 @@
 @charset "utf-8";
 
-
-.intro{
+.intro {
   display: flex;
   height: 100vh;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
 }
-.profile-box{
+.profile-box {
   position: relative;
 }
-.profile-box .txt-box{
+.profile-box .txt-box {
   position: absolute;
   bottom: 0;
   right: -230px;
 }
-.profile-img{
+.profile-img {
   width: 500px;
   /* width: 100%; */
   height: 500px;
@@ -24,118 +23,196 @@
 }
 
 /* text-animation */
-.txt-box{
+.txt-box {
   max-width: 440px;
   width: 100%;
 }
 
-
-.main-txt h2{
+.main-txt h2 {
   font-size: 4rem;
-  
   font-weight: bold;
   line-height: 130%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.sub-txt p{
+.sub-txt p {
   font-size: 1.8rem;
   line-height: 180%;
   color: #666666;
   margin-top: 30px;
 }
 
-
-
-.work-item{
+.work-item {
   display: flex;
   margin-bottom: 48px;
 }
-.main-tit{
-  padding-top: 100px;
+
+/* 각 페이지 타이틀 */
+.main-tit {
+  padding-bottom: 100px;
   text-align: center;
   font-size: 9rem;
-    font-weight: bold;
-    font-family: 'montserrat';
-    color: #202020;
+  font-weight: bold;
+  font-family: "montserrat";
+  color: #202020;
 }
-.sub-tit{
+.sub-tit {
   font-size: 2rem;
   font-weight: bold;
-  width: 125px;
+  width:20%;
 }
-.work-txt{
+.work-txt {
   flex: 1;
 }
-.work-txt p{
+.work-txt p {
   white-space: pre-line;
   line-height: 180%;
   color: #666666;
 }
 
-.work-experience{
-  margin-top: 60px;
-}
-.work-tit{
-  margin-bottom: 60px;
-}
-.work-tit .sub-tit{width: 100%;margin-bottom: 4px;}
-.li-type1{
+
+
+
+.li-type1 {
   font-size: 1.8rem;
 }
-.li-type1 li{
+.li-type1 li {
   padding-left: 12px;
   position: relative;
   margin-bottom: 20px;
-  line-height: 27px;
+  line-height: 30px;
 }
-.li-type1 li::before{
-  content: '';
+.li-type1 li::before {
+  content: "";
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 4px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10px;
   left: 0;
-  background: #666666;
+  background: #333;
 }
 
-
-.profile-box{
+.profile-box {
   display: flex;
   justify-content: space-between;
-
 }
 
-.profile-box .left{
- width:45%;
-
+.profile-box .left {
+  width: 45%;
 }
-.profile-box .right{
- width:45%;
+.profile-box .right {
+  width: 45%;
 }
 
 
+/* 날짜 */
+.date{
+  color:grey;
+  font-size:16px;
+}
 
-
-
-
-
-/* 첨부파일 버튼 */
+/* 버튼 */
 .item {
   display: inline-block;
   left: 10px;
-  color: #666;
-  font-weight: 500;
-  background: #F3F3F3;
-  border: 1px #DADADA solid;
+  color: #fff;
+  background: #7ccc35;
   padding: 0 10px;
   border-radius: 2px;
-  font-size: 9pt;
+  font-size: 12px;
   outline: none;
   text-decoration: none;
   vertical-align: middle;
   box-sizing: border-box;
   cursor: pointer;
 }
+
+
+/* 교육과정 팝업창 */
+.vid-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:0;
+  /* 높이0으로 해서 안보이게 */
+  height:100vh;
+  background: #D8E0A5;
+  z-index: 99999;
+  flex-direction: column;
+  /* 비디오 열고 닫을때 효과 */
+      transition: width 0.5s ease-in-out;
+
+ 
+}
+
+.vid-popup.on {
+
+ width:100%;
+}
+
+.vid-popup .close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #154726;
+  margin-top: 35px;
+  position: absolute;
+  bottom: 100px;
+}
+
+
+/* 교육내용 표 */
+.vid-popup table {
+  border: 1px solid red;
+  width: 1000px;
+  height: 600px;
+  opacity: 0;
+}
+
+.vid-popup table tr {
+  border-bottom: 1px solid #0e298f;
+  line-height: 150px;
+}
+
+.vid-popup table tr .t4 {
+  border-right: 1px solid #0e298f;
+}
+
+
+.vid-popup table tr th {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.vid-popup table td {
+  font-weight: 500;
+  line-height: 40px;
+}
+.vid-popup table .t2 {
+  /* border: 1px solid red; */
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 20px;
+  border-right: 1px solid #0e298f;
+}
+
+
+
+/* 기술 */
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
