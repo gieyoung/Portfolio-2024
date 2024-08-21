@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>포트폴리오 사이트</title>
-    <!-- 외부CSS호출 -->
-    <link rel="stylesheet" href="./css/common.css" />
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/common/favicon-16x16.png" />
+
+    <!-- 메인 CSS연결 -->
     <link rel="stylesheet" href="./css/main.css" />
   
     <!-- 폰트어썸 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <!-- 제이쿼리 라이브러리 상단에 불러오기 -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+
     <!-- 공통 JS연결 -->
+    <script type="module" src="./js/common.js"></script>
+    <!-- 메인 JS연결 -->
     <script type="module" src="./js/main.js"></script>
-    <script src="./js/jquery-3.5.0.min.js"></script>
+     
+  
     <!-- 외부JS 연결 -->
     <!-- <script src="./js/auto_scroll_main.js" type="module"></script> -->
 
@@ -21,36 +31,10 @@
 
   </head>
   <body>
-    <!-- 1. 상단영역 : 고정메뉴 -->
-    <div id="header">
-      <header class="inbox header">
-        <!-- 1-1.로고 -->
-        <h1 id="logo">
-          <a href="/"> GIEYOUNG'S PORTFOLIO </a>
-        </h1>
-        <!-- 1-2.GNB메뉴 -->
-        <nav class="gnb">
-          <ul>
-            <li class="on">
-              <a href="#pg1">INTRO</a>
-            </li>
-            <li>
-              <a href="#pg2">프로필</a>
-            </li>
-            <li>
-              <a href="#pg3">기술</a>
-            </li>
-            <li>
-              <a href="#pg4">포트폴리오</a>
-            </li>
-            <li>
-              <a href="#pg5">연락처</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-    <!-- 2. 페이지영역 -->
+    <!--------------------------상단영역-------------------------->
+    <div id="header"></div>
+
+    <!--------------------------메인영역-------------------------->
     <div id="content">
       <main>
         <!-- 인트로 -->
@@ -249,7 +233,7 @@
                   - AJAX를 이용해 JSON 데이터를 불러와 활용 가능</td>
               </tr>
               <tr>
-                <td class="skill"><img src="./images/html.png" class="skill-logo">HTML<br><img src="./images/css.png" class="skill-logo">CSS<br><img src="./images/sass.png" class="skill-logo">SASS</td>
+                <td class="skill"><img src="./images/html.png" class="skill-logo">HTML<br><img src="./images/css.png" class="skill-logo">CSS<br><img src="./images/sass.png" class="skill-logo">SCSS</td>
                 <td class="tg-0pky">- 직접 디자인한 시안 또는 디자인 되어있는 웹사이트 시안으로 웹표준과 웹접근성을 준수한 시맨틱 마크업으로 웹사이트를 구현 및 각 요소마다의 스타일을 파악하여 유지 및 보수 가능.<br>- 반응형 디자인 가능<br></td>
               </tr>
               <tr>
@@ -293,79 +277,20 @@
           <div class="inbox bg-com pg4">
             <div class="main-tit">PORTFOLIO</div>    
 <!-- 카테고리 -->
-            <div class="board_category_tab tit-desc">
-              <nav id="bo_cate">
-        <ul id="bo_cate_ul" >
-          <li><a href="" id="bo_cate_on">전체보기</a></li>
-          <li><a href="">그린아카데미 프로젝트 작업물</a></li>
-          <li><a href="">드림웨어 작업물</a></li>
-          <!-- <li><a href="">대우</a></li> -->
+         
+              <div class="category">
+        <ul>
+          <li><a href="#" id="all" class="on">전체보기</a></li>
+          <li><a href="#" id="green">그린아카데미 프로젝트 작업물</a></li>
+          <li><a href="#" id="dream">드림웨어 작업물</a></li>
+       
         </ul>
-      </nav>
-      <ul class="board_newgallery">
-        <li class="icecream">
-          <div class="image">
-            <a
-              href="#"
-              style="
-                background-image: url('/FED-RF-2nd-PJ-gieyoung/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/03.%20%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/nenia-app/build/images/store/icecream/1.png');
-               
-              "
-            ></a
-            ><span>아이스크림</span>
-          </div>
-          <dl class="info">
-            <a href="#"
-              ><dt class="subject">
-                <span>오뚜기</span>
-              </dt>
-              <dd class="content">퍼블리싱</dd></a
-            >
-          </dl>
-        </li>
-        <li class="icecream">
-          <div class="image">
-            <a
-              href="#"
-              style="
-                background-image: url('/FED-RF-2nd-PJ-gieyoung/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/03.%20%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/nenia-app/build/images/store/icecream/1.png');
-              
-              "
-            ></a
-            ><span>아이스크림</span>
-          </div>
-          <dl class="info">
-            <a href="#"
-              ><dt class="subject">
-                <span>오뚜기</span>
-              </dt>
-              <dd class="content">퍼블리싱</dd></a
-            >
-          </dl>
-        </li>
-        <li class="icecream">
-          <div class="image">
-            <a
-              href="#"
-              style="
-                background-image: url('/FED-RF-2nd-PJ-gieyoung/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/03.%20%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/nenia-app/build/images/store/icecream/1.png');
-                
-              "
-            ></a
-            ><span>아이스크림</span>
-          </div>
-          <dl class="info">
-            <a href="#"
-              ><dt class="subject">
-                <span>오뚜기</span>
-              </dt>
-              <dd class="content">퍼블리싱</dd></a
-            >
-          </dl>
-        </li>
-      </ul>
+      </div>
+   
       
-            </div>
+       
+               <!-- 포트폴리오 리스트 -->
+      <div class="port-list-wrap"></div>
 
 
           </div>
@@ -384,10 +309,10 @@
                 </div>
                 <div class="contact-li">
                   <div class="contact-item">
-                    <i class="fa fa-regular fa-envelope"></i><a href="mailto:Poohlee23@naver.com">poohlee23@naver.com</a>
+                    <i class="fa fa-regular fa-envelope"></i><a href="mailto:Poohlee23@naver.com" title="메일주소">poohlee23@naver.com</a>
                   </div>
                   <div class="contact-item">
-                    <i class="fa fa-solid fa-mobile-screen"></i><a href="tel:010-9961-9245">010-9961-9245</a>
+                    <i class="fa fa-solid fa-mobile-screen"></i><a href="tel:010-9961-9245" title="연락처">010-9961-9245</a>
                   </div>
                   <div class="contact-item">
                     <i class="fa fa-regular fa-map"></i><span>서초역(2호선) 또는 부천역(1호선) 통근 가능</span>
@@ -405,9 +330,9 @@
         </section>
       </main>
     </div>
-    <!-- 3. 하단영역 -->
+    <!--------------------------하단영역-------------------------->
     <div id="footer">
-      <footer class="inbox"></footer>
+     
     </div>
 
     <!-- 3. 인디케이터(위치표시자) -->

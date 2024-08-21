@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+@import url(./common.css);
+
+/* 프로젝트 디테일 */
+.wrap {
+  padding: 250px 0;
+}
+
+.description h3 {
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.detail-con {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.detail-con .item {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.detail-con .item:first-child {
+  padding-left: 0;
+}
+.detail-con .item:last-child {
+  padding-right: 0;
+}
+.detail-con .item::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  right: 0;
+  background: #bbbbbb;
+}
+.detail-con .item:last-child:after {
+  display: none;
+}
+.detail-con .item h5 {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #ed6a00;
+}
+.detail-con .item span {
+  font-weight: 500;
+}
+.detail-con .item.link a {
+  display: inline-flex;
+  color: #ed6a00;
+  font-weight: 500;
+}
+
+.txt {
+  font-size: 2rem;
+  white-space: pre-line;
+  color: #666666;
+  line-height: 180%;
+}
+
+.prj-item {
+  text-align: center;
+  border: 1px solid #969696;
+  overflow: hidden;
+}
+
+.flex-box2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  padding-top: 6rem;
+}
+.box-full {
+  height: 800px;
+  position: relative;
+}
+.box-full img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  height: max-content;
+}
+
+.flex-box2 {
+}
+.flex-box2 .prj-item {
+  height: 580px;
+  position: relative;
+}
+.flex-box2 img {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.flex-box2 .p-top {
+  top: 0;
+  transform: translate(-50%, 0) !important;
+}
+
+.box-lg {
+  width: 55%;
+}
+.box-md {
+  width: 45%;
+}
+
+/* 사이트 열기 버튼 */
+.go-btn {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.btn {
+  min-width: 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  background: #202020;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0 25px;
+  font-size: 1.6rem;
+  transition: 0.2s;
+}
+.btn i {
+  font-size: 15px;
+  margin-left: 6px;
+}
+
+/* 버전2 */
+.tit-type {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.tit-type h4 {
+  font-size: 9rem;
+  font-weight: bold;
+  font-family: "montserrat";
+  color: #202020;
+}
+.tit-type p {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+/* 웹포폴2 */
+.web-portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.web-portfolio li {
+  width: 49%;
+  margin-bottom: 60px;
+}
+.web-portfolio li a {
+  width: 100%;
+  max-height: 607px;
+  display: inline-block;
+}
+.web-portfolio .web-portfolio-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+.tit-type2 {
+  margin-top: 20px;
+}
+.tit-type2 h5 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.tit-type2 p {
+  margin-top: 8px;
+  color: #9b9b9b;
+  font-size: 2rem;
+}
+
+/* 디자인포폴 */
+#design-wrap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.design-ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: space-around;
+  gap: 1%;
+}
+.design-ul li {
+  width: 32%;
+  margin-bottom: 60px;
+}
+.design-img {
+  display: inline-block;
+  width: 100%;
+  max-height: 680px;
+}
+.design-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.design-detail-wrap {
+  padding-top: 80px;
+}
+.design-detail {
+  margin-top: 60px;
+}

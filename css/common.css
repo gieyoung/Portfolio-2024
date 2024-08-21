@@ -1,19 +1,14 @@
 @charset "utf-8";
+
+
 /* 공유기능 요소 셋팅 */
 @import url(./core.css); 
 @import url(./reset.css);
 
 
-/* 페이지 속박스 */
-.page .inbox {
-  position: relative;
-  height: auto;
-  padding: 100px 0;
-  width:90%;
-}
 
 
-/* 1. 상단영역 */
+/**************************상단*********************/
 #header {
   position: fixed;
   /* 상단고정-보이는화면기준 */
@@ -32,7 +27,7 @@
   align-items: center;
 }
 
-/* 1-1.로고 */
+/* 로고 */
 #logo{
   width: 20%;
   line-height: 100px;
@@ -47,11 +42,11 @@
   margin-top: -24px;
 }
 
-/* 1-2. GNB 메뉴 */
+/* GNB 메뉴 */
 .gnb {
   width:80%;
 }
-/* 메뉴 플렉스박스 */
+
 .gnb ul {
   display: flex;
   justify-content: flex-end;
@@ -73,10 +68,7 @@
   transform: scale(1.1);
 }
 
-/* 각 페이지 클래스 */
-#pg1 {
-  background-color: #fff;
-}
+
 
 
 /* 인디케이터 */
@@ -118,4 +110,45 @@
 /* 설명글자숨기기 */
 .indic span {
   display: none;
+}
+
+
+/**************************하단*********************/
+
+#footer .inbox{
+  padding: 20px 0;
+}
+.copyright{
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/* 탑버튼 */
+.top-btn{
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #7ccc35;
+  border-radius: 100%;
+  z-index: 999;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+#footer .fa{
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#fff;
+ 
+
+}
+.top-btn.on {
+  opacity: 1;
 }
