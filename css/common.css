@@ -1,12 +1,8 @@
 @charset "utf-8";
 
-
 /* 공유기능 요소 셋팅 */
-@import url(./core.css); 
+@import url(./core.css);
 @import url(./reset.css);
-
-
-
 
 /**************************상단*********************/
 #header {
@@ -14,27 +10,26 @@
   /* 상단고정-보이는화면기준 */
   width: 100%;
   z-index: 9999; /* 맨위! */
-  background: #c8c8c8;
-  border-bottom: 1px solid #E8E8E8;
+  background: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 /* 상단영역 속박스 */
 .header {
   position: relative;
   /* 부모자격 */
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /* 로고 */
-#logo{
+#logo {
   width: 20%;
   line-height: 100px;
-   
 }
 
-#logo a{
+#logo a {
   font-weight: bold;
 }
 #logo img {
@@ -44,7 +39,7 @@
 
 /* GNB 메뉴 */
 .gnb {
-  width:80%;
+  width: 80%;
 }
 
 .gnb ul {
@@ -55,21 +50,18 @@
   margin: 0 20px;
 }
 
-.gnb li a{
-  font-size:2.0rem;
+.gnb li a {
+  font-size: 2rem;
   font-weight: bold;
 }
 /* 메뉴에 마우스 오버시 + li.on 인경우 */
 .gnb a:hover,
 .gnb li.on a {
   display: inline-block; /* 트랜스폼적용위해 */
-  color: lime;
+  color: #7ccc35;
   text-decoration: overline; /* 윗줄 */
   transform: scale(1.1);
 }
-
-
-
 
 /* 인디케이터 */
 .indic {
@@ -112,20 +104,18 @@
   display: none;
 }
 
-
 /**************************하단*********************/
 
-#footer .inbox{
+#footer .inbox {
   padding: 20px 0;
 }
-.copyright{
+.copyright {
   font-size: 18px;
   text-align: center;
 }
 
-
 /* 탑버튼 */
-.top-btn{
+.top-btn {
   display: inline-block;
   position: fixed;
   bottom: 20px;
@@ -135,19 +125,17 @@
   background-color: #7ccc35;
   border-radius: 100%;
   z-index: 999;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   opacity: 0;
 }
 
-#footer .fa{
+#footer .fa {
   font-size: 2rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:#fff;
- 
-
+  color: #fff;
 }
 .top-btn.on {
   opacity: 1;

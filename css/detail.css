@@ -3,14 +3,17 @@
 @import url(./common.css);
 
 /* 프로젝트 디테일 */
+
+
 .wrap {
-  padding: 250px 0;
+  padding: 100px 0;
+
 }
 
 .description h3 {
   font-size: 4.8rem;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 60px;
 }
 .detail-con {
   font-size: 2rem;
@@ -122,12 +125,12 @@
   margin-bottom: 60px;
 }
 .btn {
-  min-width: 180px;
+  min-width: 140px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 46px;
-  background: #202020;
+  height: 50px;
+  background: #7ccc35;
   color: #fff;
   font-weight: 600;
   border-radius: 50px;

@@ -37,7 +37,7 @@ function portList(id = "all") {
         
       "
     ></a
-    ><span>${v.category}</span>
+    >
   </div>
   <dl class="info">
     <a href="./detail.html?id=${v.idx}"

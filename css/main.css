@@ -324,7 +324,7 @@
 
 .port-list li {
   list-style: none;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   position: relative;
   width: 31.3%;
 }
@@ -337,7 +337,7 @@
   overflow: hidden;
   position: relative;
   background-color: #000;
-  border-radius: 20px;
+
 }
 
 .port-list dl.info {
@@ -434,7 +434,7 @@
 }
 
 .contact-li{
-  background-color: #FAF3E6;
+  background-color: #f6f6f6;
   box-sizing: border-box;
     padding: 20px;
     width: 80%;
